@@ -1,0 +1,3 @@
+include ':dskit_aar_250502'
+include ':app'
+rootProject.name = "PanCashbackLoan"

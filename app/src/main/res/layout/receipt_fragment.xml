@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:fillViewport="true" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="144dp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_logo" />
+
+        <com.pan.dskit.textview.PanTitleLabel.PanTitleLabel
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="61dp"
+            app:color_label="blue"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imLogo"
+            app:text_label="Comprovante\nde empréstimo" />
+
+        <com.pan.dskit.textview.PanLabel.PanLabel
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="11dp"
+            app:color_label="black"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:style_label="semibold"
+            app:text_label="21/05/2019 às 14h00" />
+
+        <com.pan.dskit.textview.PanSmallLabel.PanSmallLabel
+            android:id="@+id/txtLoan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="@dimen/dimen_64"
+            app:color_label="black"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtDate"
+            app:text_label="Valor do empréstimo:" />
+
+        <com.pan.dskit.textview.PanTitleLabel.PanTitleLabel
+            android:id="@+id/txtValueSimulated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="5dp"
+            app:color_label="blue"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLoan"
+            app:text_label="R$ 1.500,00" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="116dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="39dp"
+            android:background="@color/dodger_blue"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtValueSimulated" />
+
+        <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
+            android:id="@+id/summaryItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/dimen_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1"
+            app:text_key_item="Contratado por:"
+            app:text_value_item="Matheus de Santos Borba"
+            app:type_summary_item="secundary" />
+
+        <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
+            android:id="@+id/summaryItemAgency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/dimen_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/summaryItemName"
+            app:text_key_item="Agência:"
+            app:text_value_item="0001"
+            app:type_summary_item="secundary" />
+
+        <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
+            android:id="@+id/summaryItemCheckingAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/dimen_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/summaryItemAgency"
+            app:text_key_item="Conta-corrente:"
+            app:text_value_item="2090-1"
+            app:type_summary_item="secundary" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="116dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="46dp"
+            android:background="@color/dodger_blue"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/summaryItemCheckingAccount" />
+
+        <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
+            android:id="@+id/summaryItemNumberInstallments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/dimen_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line2"
+            app:text_key_item="Número de parcelas:"
+            app:text_value_item="24 vezes"
+            app:type_summary_item="secundary" />
+
+        <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
+            android:id="@+id/summaryItemValueInstallments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/dimen_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/summaryItemNumberInstallments"
+            app:text_key_item="Valor das parcelas:"
+            app:text_value_item="R$ 109,45"
+            app:type_summary_item="secundary" />
+
+        <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
+            android:id="@+id/summaryItemTotalValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/dimen_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/summaryItemValueInstallments"
+            app:text_key_item="Total a ser pago:"
+            app:text_value_item="R$ 2.626,75"
+            app:type_summary_item="secundary" />
+
+        <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
+            android:id="@+id/summaryItemMaturityInstallment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/dimen_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/summaryItemTotalValue"
+            app:text_key_item="Vencimento das parcelas:"
+            app:text_value_item="Dia 5 de cada mês"
+            app:type_summary_item="secundary" />
+
+        <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
+            android:id="@+id/summaryItemFirstInstallment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/dimen_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/summaryItemMaturityInstallment"
+            app:text_key_item="Primeira parcela:"
+            app:text_value_item="05/06/2019"
+            app:type_summary_item="secundary" />
+
+        <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
+            android:id="@+id/summaryItemLastInstallment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/dimen_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/summaryItemFirstInstallment"
+            app:text_key_item="Última parcela:"
+            app:text_value_item="05/06/2021"
+            app:type_summary_item="secundary" />
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="116dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="46dp"
+            android:background="@color/dodger_blue"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/summaryItemLastInstallment" />
+
+        <com.pan.dskit.textview.PanSmallLabel.PanSmallLabel
+            android:id="@+id/txtReturns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="36dp"
+            app:color_label="black"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line3"
+            app:text_label="O Pan devolve:" />
+
+        <com.pan.dskit.textview.PanTitleLabel.PanTitleLabel
+            android:id="@+id/txtValueReturns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="5dp"
+            app:color_label="blue"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtReturns"
+            app:text_label="R$ 150,64" />
+
+        <com.pan.dskit.textview.PanSmallLabel.PanSmallLabel
+            android:id="@+id/txtInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="189dp"
+            app:align_label="start"
+            app:color_label="black"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtValueReturns"
+            app:text_label="Você deve pagar todas as parcelas em dia para receber o valor. " />
+
+        <View
+            android:id="@+id/line4"
+            android:layout_width="116dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="46dp"
+            android:background="@color/dodger_blue"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtInfo" />
+
+        <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
+            android:id="@+id/summaryItemFeesAndCharges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/dimen_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line4"
+            app:text_key_item="Taxas e encargos:"
+            app:text_value_item="IOF: 0,01%\nJuros ao mês: 5%\nJuros e IOF (CET):\n60% ao ano"
+            app:type_summary_item="secundary" />
+
+        <View
+            android:id="@+id/line5"
+            android:layout_width="116dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="46dp"
+            android:background="@color/dodger_blue"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/summaryItemFeesAndCharges" />
+
+        <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
+            android:id="@+id/summaryItemSecurityAuthentication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_64"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/dimen_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line5"
+            app:text_key_item="Autenticação de segurança:"
+            app:text_value_item="681A.392B.183A.492B"
+            app:type_summary_item="secundary" />
+
+        <com.pan.dskit.button.PanRoundButton.PanRoundButton
+            android:id="@+id/btnShareReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_40"
+            android:layout_marginTop="@dimen/dimen_64"
+            android:layout_marginEnd="@dimen/dimen_40"
+            android:layout_marginBottom="@dimen/dimen_48"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/summaryItemSecurityAuthentication"
+            app:text_button="Compartilhar comprovante"
+            app:type_button="primary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

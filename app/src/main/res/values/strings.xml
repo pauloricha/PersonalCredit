@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PanCashbackLoan</string>
+
+    <!-- Simulation Screen -->
+    <string name="txt_title_simulation">Qual valor você quer simular?</string>
+    <string name="txt_btn_continue_simulation">Seguir com esse valor</string>
+    <string name="txt_btn_type_value_simulation">Digitar valor</string>
+
+    <!-- Custom Simulation Screen -->
+    <string name="txt_label_edt_custom_simulation">Valor da simulação</string>
+
+    <!-- Payment Month Screen -->
+    <string name="txt_title_payment_month">Quando quer começar a pagar?</string>
+    <string name="txt_btn_payment_month">Seguir com essa data</string>
+
+    <!-- Confirmation Screen -->
+    <string name="txt_title_confirmation">Pronto!\nEssa é sua\nsimulação:</string>
+    <string name="txt_btn_contract_confirmation">Quero contratar</string>
+    <string name="txt_btn_check_data_confirmation">Conferir todos os dados</string>
+
+    <!-- Success Screen -->
+    <string name="txt_title_success">Empréstimo\nContratado\ncom sucesso!</string>
+    <string name="txt_subtitle_success">Você recebeu R$ 1.500,00\nna sua conta Pan.</string>
+    <string name="txt_btn_finish_contract_success">Finalizar contratação</string>
+    <string name="txt_btn_open_receipt_success">Abrir comprovante</string>
+
+
+
+    <string name="text_installments">Parcelas a partir de </string>
+</resources>

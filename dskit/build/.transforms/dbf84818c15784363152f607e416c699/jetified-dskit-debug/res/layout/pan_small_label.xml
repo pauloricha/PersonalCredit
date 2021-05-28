@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/smallLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:autoSizeMaxTextSize="@dimen/font_20"
+        app:autoSizeMinTextSize="@dimen/font_14"
+        app:autoSizeStepGranularity="1sp"
+        tools:fontFamily="@font/isidora_sans_regular"
+        tools:textColor="@color/black"
+        tools:text="PanSmallLabel" />
+</FrameLayout>

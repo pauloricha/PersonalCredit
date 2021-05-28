@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.pan.pancashbackloan.ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_home_to_start"
+            app:destination="@id/startFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.pan.pancashbackloan.ui.start.StartFragment"
+        android:label="start_fragment"
+        tools:layout="@layout/start_fragment" >
+        <action
+            android:id="@+id/action_start_to_simulate"
+            app:destination="@id/simulationFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_start_to_confirmation"
+            app:destination="@id/confirmationFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_start_to_simulation"
+            app:destination="@id/simulationFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/simulationFragment"
+        android:name="com.pan.pancashbackloan.ui.simulation.SimulationFragment"
+        android:label="simulation_fragment"
+        tools:layout="@layout/simulation_fragment" >
+        <action
+            android:id="@+id/action_simulation_to_custom_simulation"
+            app:destination="@id/customSimulationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_simulation_to_payment_month"
+            app:destination="@id/paymentMonthFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customSimulationFragment"
+        android:name="com.pan.pancashbackloan.ui.customSimulation.CustomSimulationFragment"
+        android:label="custom_simulation_fragment"
+        tools:layout="@layout/custom_simulation_fragment">
+        <action
+            android:id="@+id/action_custom_simulation_to_payment_month"
+            app:destination="@id/paymentMonthFragment"
+            app:enterAnim="@anim/slide_in_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentMonthFragment"
+        android:name="com.pan.pancashbackloan.ui.paymentMonth.PaymentMonthFragment"
+        android:label="payment_month_fragment"
+        tools:layout="@layout/payment_month_fragment">
+        <action
+            android:id="@+id/action_payment_month_to_confirmation"
+            app:destination="@id/confirmationFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.pan.pancashbackloan.ui.confirmation.ConfirmationFragment"
+        android:label="confirmation_fragment"
+        tools:layout="@layout/confirmation_fragment" >
+        <action
+            android:id="@+id/action_confirmation_to_success"
+            app:destination="@id/successFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.pan.pancashbackloan.ui.success.SuccessFragment"
+        android:label="success_fragment"
+        tools:layout="@layout/success_fragment" >
+        <action
+            android:id="@+id/action_success_to_receipt"
+            app:destination="@id/receiptFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/receiptFragment"
+        android:name="com.pan.pancashbackloan.ui.receipt.ReceiptFragment"
+        android:label="receipt_fragment"
+        tools:layout="@layout/receipt_fragment" />
+
+</navigation>

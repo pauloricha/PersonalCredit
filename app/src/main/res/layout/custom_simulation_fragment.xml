@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnContinue"
+        android:background="@color/light_white"
+        android:fillViewport="true" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.pan.dskit.toolbar.PanToolbar.PanToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginTop="80dp" />
+
+            <com.pan.dskit.textview.PanTitleLabel.PanTitleLabel
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="@dimen/dimen_64"
+                app:text_label="@string/txt_title_simulation"
+                app:align_label="center"
+                app:color_label="black"/>
+
+            <RelativeLayout
+                android:id="@+id/rlInstallments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintVertical_bias="0"
+                android:gravity="center" >
+
+                <com.pan.dskit.textview.PanLabel.PanLabel
+                    android:id="@+id/txtLabelInstallments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_32"
+                    android:layout_marginTop="@dimen/dimen_19"
+                    app:text_label="@string/text_installments"
+                    app:style_label="regular"
+                    app:color_label="@color/black" />
+
+                <com.pan.dskit.textview.PanLabel.PanLabel
+                    android:id="@+id/txtInstallments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_32"
+                    android:layout_toEndOf="@+id/txtLabelInstallments"
+                    android:layout_marginTop="@dimen/dimen_19"
+                    android:layout_marginStart="5dp"
+                    app:text_label=" R$ 8,00"
+                    app:style_label="semibold"
+                    app:color_label="black" />
+
+            </RelativeLayout>
+
+            <com.pan.dskit.editText.PanEditText.PanEditText
+                android:id="@+id/edText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/rlInstallments"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintVertical_bias="0"
+                android:layout_marginTop="@dimen/dimen_48"
+                android:layout_marginStart="@dimen/dimen_40"
+                android:layout_marginEnd="@dimen/dimen_40"
+                app:min_value="100" />
+
+            <com.pan.dskit.textview.PanSmallLabel.PanSmallLabel
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edText"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintVertical_bias="0"
+                app:text_label="@string/txt_label_edt_custom_simulation"
+                app:color_label="black"
+                app:style_label="regular"
+                app:align_label="center"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.pan.dskit.button.PanSquareButton.PanSquareButton
+        android:id="@+id/btnToPaymentMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:text_button="@string/txt_btn_continue_simulation"
+        app:type_button="primary" />
+
+</RelativeLayout>
