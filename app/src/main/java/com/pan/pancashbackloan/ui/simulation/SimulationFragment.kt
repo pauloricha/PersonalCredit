@@ -1,5 +1,6 @@
 package com.pan.pancashbackloan.ui.simulation
 
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,33 +17,27 @@ import com.pan.pancashbackloan.model.SimulatedValues
 
 class SimulationFragment : Fragment() {
 
-    private var _binding: SimulationFragmentBinding? = null
-    private val binding: SimulationFragmentBinding get() = _binding!!
+    private lateinit var binding: SimulationFragmentBinding
 
     private val viewModel: SimulationViewModel by viewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        _binding = SimulationFragmentBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+    ): View {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            requireActivity().window.statusBarColor = getResources().getColor(R.color.light_white)
+            requireActivity().window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-        viewModel.simulatedValues.observe(viewLifecycleOwner, Observer<SimulatedValues> {
-            simulatedValues ->
-            binding.txtInstallment.setTextLabel(simulatedValues.installment)
-            binding.txtMoney.setTextLabel(simulatedValues.money)
-        })
+        binding = SimulationFragmentBinding.inflate(inflater, container, false)
 
         binding.slider.apply {
             setOnPanSliderListener(object: IPanSliderListener {
                 override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean,
                                                progressValue: String) {
-                    viewModel.getSimulatedValues(progressValue.toDouble())
+                    viewModel.getSimulatedValues(progressValue.toInt())
                 }
 
                 override fun onStartTrackingTouch(seekBar: SeekBar?) {
@@ -64,5 +59,17 @@ class SimulationFragment : Fragment() {
                 R.id.action_simulation_to_custom_simulation
             )
         }
+
+        subscribeUi()
+
+        return binding.root
+    }
+
+    private fun subscribeUi() {
+        viewModel.simulatedValues.observe(viewLifecycleOwner, Observer<SimulatedValues> {
+                simulatedValues ->
+            binding.txtInstallment.setTextLabel(simulatedValues.installment)
+            binding.txtMoney.setTextLabel(simulatedValues.money)
+        })
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -38,12 +39,12 @@
             android:layout_marginStart="@dimen/dimen_64"
             android:background="@color/dark_gray"
             app:text_label="Valor simulado"
-            app:style_label="regular"
+            app:font_label="regular"
             app:align_label="start"
             app:color_label="white"/>
 
         <com.pan.dskit.textview.PanTitleLabel.PanTitleLabel
-            android:id="@+id/txtValue"
+            android:id="@+id/tv_simulated_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/txtTitle"
@@ -55,7 +56,6 @@
             android:layout_marginTop="@dimen/dimen_32"
             android:layout_marginStart="@dimen/dimen_64"
             android:background="@color/dark_gray"
-            app:text_label="R$ 1.500,00"
             app:color_label="white"
             app:size_label="42"/>
 
@@ -64,9 +64,9 @@
             android:layout_width="0dp"
             android:layout_height="2dp"
             android:background="@color/dodger_blue"
-            app:layout_constraintTop_toBottomOf="@+id/txtValue"
-            app:layout_constraintStart_toStartOf="@+id/txtValue"
-            app:layout_constraintEnd_toEndOf="@+id/txtValue"
+            app:layout_constraintTop_toBottomOf="@+id/tv_simulated_value"
+            app:layout_constraintStart_toStartOf="@+id/tv_simulated_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_simulated_value"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintVertical_bias="0"
             android:layout_marginTop="3dp" />
@@ -84,12 +84,12 @@
             android:layout_marginStart="@dimen/dimen_64"
             android:background="@color/dark_gray"
             app:text_label="Pague em dia e receba\nparte do valor de volta."
-            app:style_label="regular"
+            app:font_label="regular"
             app:align_label="start"
             app:color_label="white"/>
 
         <com.pan.dskit.items.PanImageInfoitem.PanImageInfoItem
-            android:id="@+id/imageInfoItem1"
+            android:id="@+id/item_simulate_proceed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -99,8 +99,7 @@
             android:layout_marginBottom="72dp"
             android:background="@color/dark_gray"
             app:theme_item="primary"
-            app:src_item="@drawable/ic_money"
-            app:text_item="Seguir com R$ 1.500,00"/>
+            app:src_item="@drawable/ic_money" />
 
         <com.pan.dskit.items.PanImageInfoitem.PanImageInfoItem
             android:id="@+id/imageInfoItem2"

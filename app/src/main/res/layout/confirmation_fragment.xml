@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -48,7 +49,7 @@
             app:color_label="white"/>
 
         <com.pan.dskit.textview.PanTitleLabel.PanTitleLabel
-            android:id="@+id/txtValue"
+            android:id="@+id/tv_simulated_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/dodger_blue"
@@ -59,7 +60,6 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintVertical_bias="0"
             android:layout_marginStart="@dimen/dimen_64"
-            app:text_label="R$ 1.500,00"
             app:color_label="white"/>
 
         <View
@@ -67,9 +67,9 @@
             android:layout_width="0dp"
             android:layout_height="2dp"
             android:background="@color/black"
-            app:layout_constraintTop_toBottomOf="@+id/txtValue"
-            app:layout_constraintStart_toStartOf="@+id/txtValue"
-            app:layout_constraintEnd_toEndOf="@+id/txtValue"
+            app:layout_constraintTop_toBottomOf="@+id/tv_simulated_value"
+            app:layout_constraintStart_toStartOf="@+id/tv_simulated_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_simulated_value"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintVertical_bias="0"
             android:layout_marginTop="3dp"
@@ -87,9 +87,9 @@
             android:layout_marginTop="@dimen/dimen_40"
             android:layout_marginStart="@dimen/dimen_64"
             android:layout_marginEnd="@dimen/dimen_64"
-            app:text_key_item="Parcelas"
+            app:text_title_item="Parcelas"
             app:text_value_item="24x de R$ 109,45"
-            app:type_summary_item="primary"/>
+            app:theme_summary_item="primary"/>
 
         <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
             android:id="@+id/summaryItem2"
@@ -103,9 +103,9 @@
             android:layout_marginTop="@dimen/dimen_10"
             android:layout_marginStart="@dimen/dimen_64"
             android:layout_marginEnd="@dimen/dimen_64"
-            app:text_key_item="Total a ser pago:"
+            app:text_title_item="Total a ser pago:"
             app:text_value_item="R$ 2.624,64"
-            app:type_summary_item="primary"/>
+            app:theme_summary_item="primary"/>
 
         <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
             android:id="@+id/summaryItem3"
@@ -120,12 +120,12 @@
             android:layout_marginStart="@dimen/dimen_64"
             android:layout_marginEnd="@dimen/dimen_64"
             android:layout_marginBottom="@dimen/dimen_10"
-            app:text_key_item="O Pan devolve:"
+            app:text_title_item="O Pan devolve:"
             app:text_value_item="R$ 150,64"
-            app:type_summary_item="primary"/>
+            app:theme_summary_item="primary"/>
 
         <com.pan.dskit.button.PanRoundButton.PanRoundButton
-            android:id="@+id/btnContinue"
+            android:id="@+id/btnToSuccess"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/dodger_blue"
@@ -137,7 +137,7 @@
             android:layout_marginEnd="@dimen/dimen_40"
             android:layout_marginBottom="@dimen/dimen_32"
             app:text_button="@string/txt_btn_contract_confirmation"
-            app:type_button="secundary" />
+            app:theme_button="secundary" />
 
         <com.pan.dskit.button.PanLinkButton.PanLinkButton
             android:id="@+id/btnToReceipt"
@@ -152,7 +152,7 @@
             android:layout_marginEnd="@dimen/dimen_40"
             android:layout_marginBottom="68dp"
             app:text_button="@string/txt_btn_check_data_confirmation"
-            app:type_button="secundary" />
+            app:theme_button="secundary" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

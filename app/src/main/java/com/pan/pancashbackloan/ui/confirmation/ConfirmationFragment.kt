@@ -6,40 +6,42 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.pan.pancashbackloan.R
+import com.pan.pancashbackloan.common.getMoneyFormat
 import com.pan.pancashbackloan.databinding.ConfirmationFragmentBinding
+import com.pan.pancashbackloan.ui.start.StartFragmentArgs
 
 //@AndroidEntryPoint
 class ConfirmationFragment : Fragment() {
 
-    private var _binding: ConfirmationFragmentBinding? = null
-    private val binding: ConfirmationFragmentBinding get() = _binding!!
+    private lateinit var binding: ConfirmationFragmentBinding
 
-    private lateinit var viewModel: ConfirmationViewModel
+    private val viewModel: ConfirmationViewModel by viewModels()
+
+    val args: ConfirmationFragmentArgs by navArgs()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = ConfirmationFragmentBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             requireActivity().window.statusBarColor = getResources().getColor(R.color.dodger_blue)
         }
 
-        viewModel = ViewModelProvider(this).get(ConfirmationViewModel::class.java)
+        binding = ConfirmationFragmentBinding.inflate(inflater, container, false)
 
-        binding.btnContinue.setOnClickListener {
+        binding.tvSimulatedValue.setTextLabel(getMoneyFormat(args.money.toDouble()))
+
+        binding.btnToSuccess.setOnClickListener {
             findNavController().navigate(
                 R.id.action_confirmation_to_success
             )
         }
+
+        return binding.root
     }
 }

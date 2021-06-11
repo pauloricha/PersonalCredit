@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -61,7 +62,7 @@
                 android:layout_height="32dp"
                 android:layout_marginTop="@dimen/dimen_19"
                 app:text_label="@string/text_installments"
-                app:style_label="regular"
+                app:font_label="regular"
                 app:color_label="@color/black" />
 
             <com.pan.dskit.textview.PanLabel.PanLabel
@@ -72,7 +73,7 @@
                 android:layout_marginTop="@dimen/dimen_19"
                 android:layout_marginStart="5dp"
                 app:text_label=" R$ 8,00"
-                app:style_label="semibold"
+                app:font_label="semibold"
                 app:color_label="black" />
         </RelativeLayout>
 
@@ -103,7 +104,7 @@
             android:layout_marginEnd="@dimen/dimen_40"
             android:layout_marginBottom="@dimen/dimen_32"
             app:text_button="@string/txt_btn_continue_simulation"
-            app:type_button="primary" />
+            app:theme_button="primary" />
 
         <com.pan.dskit.button.PanLinkButton.PanLinkButton
             android:id="@+id/btnToCustomSimulation"
@@ -115,7 +116,7 @@
             app:layout_constraintVertical_bias="1"
             android:layout_marginBottom="68dp"
             app:text_button="@string/txt_btn_type_value_simulation"
-            app:type_button="primary" />
+            app:theme_button="primary" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

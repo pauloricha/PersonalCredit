@@ -9,7 +9,11 @@ class Repository: IRepository{
 
     val dataFormatter = DataFormatter()
 
-    override suspend fun getSimulatedValues(progressValue: Double): SimulatedValues {
+    fun getLoanApproved(): Int {
+        return 1200
+    }
+
+    override suspend fun getSimulatedValues(progressValue: Int): SimulatedValues {
         return withContext(Dispatchers.Default){
             dataFormatter.getSimulatedValues(progressValue)
         }

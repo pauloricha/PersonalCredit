@@ -21,7 +21,7 @@ class SimulationViewModel: ViewModel() {
     }
     val simulatedValues: LiveData<SimulatedValues> get() = _simulatedValues
 
-    fun getSimulatedValues(progressValue: Double) {
+    fun getSimulatedValues(progressValue: Int) {
         viewModelScope.launch {
             val simulatedValues = withContext(Dispatchers.Default){
                 repository.getSimulatedValues(progressValue)

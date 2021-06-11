@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">PanCashbackLoan</string>
 
+    <!-- Home Screen -->
+    <string name="txt_btn_simulate">Quero simular</string>
+
+    <!-- Start Screen -->
+    <string name="txt_item_simulate_proceed">Seguir com %s</string>
+
     <!-- Simulation Screen -->
     <string name="txt_title_simulation">Qual valor você quer simular?</string>
     <string name="txt_btn_continue_simulation">Seguir com esse valor</string>
@@ -23,8 +29,6 @@
     <string name="txt_subtitle_success">Você recebeu R$ 1.500,00\nna sua conta Pan.</string>
     <string name="txt_btn_finish_contract_success">Finalizar contratação</string>
     <string name="txt_btn_open_receipt_success">Abrir comprovante</string>
-
-
 
     <string name="text_installments">Parcelas a partir de </string>
 </resources>

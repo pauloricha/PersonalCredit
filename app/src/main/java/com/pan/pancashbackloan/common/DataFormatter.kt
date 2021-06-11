@@ -6,12 +6,12 @@ import java.util.*
 
 class DataFormatter {
 
-    fun getSimulatedValues(progressValue: Double) : SimulatedValues{
-        val percentageValue = progressValue.toInt() * 0.08
-        return SimulatedValues(getMoneyFormat(progressValue), getMoneyFormat(percentageValue))
+    fun getSimulatedValues(progressValue: Int) : SimulatedValues{
+        val percentageValue = progressValue * 0.08
+        return SimulatedValues(getMoneyFormat(progressValue), getMoneyFormat(percentageValue.toInt()))
     }
 
-    fun getMoneyFormat(valueToFormat: Double): String {
+    fun getMoneyFormat(valueToFormat: Int): String {
         val format = NumberFormat.getCurrencyInstance(Locale( "pt", "BR" ))
         return format.format(valueToFormat).toString()
     }

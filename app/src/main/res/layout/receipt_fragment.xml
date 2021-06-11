@@ -47,7 +47,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title"
-            app:style_label="semibold"
+            app:font_label="semibold"
             app:text_label="21/05/2019 às 14h00" />
 
         <com.pan.dskit.textview.PanSmallLabel.PanSmallLabel
@@ -99,9 +99,9 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/line1"
-            app:text_key_item="Contratado por:"
+            app:text_title_item="Contratado por:"
             app:text_value_item="Matheus de Santos Borba"
-            app:type_summary_item="secundary" />
+            app:theme_summary_item="secundary" />
 
         <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
             android:id="@+id/summaryItemAgency"
@@ -114,9 +114,9 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/summaryItemName"
-            app:text_key_item="Agência:"
+            app:text_title_item="Agência:"
             app:text_value_item="0001"
-            app:type_summary_item="secundary" />
+            app:theme_summary_item="secundary" />
 
         <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
             android:id="@+id/summaryItemCheckingAccount"
@@ -129,9 +129,9 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/summaryItemAgency"
-            app:text_key_item="Conta-corrente:"
+            app:text_title_item="Conta-corrente:"
             app:text_value_item="2090-1"
-            app:type_summary_item="secundary" />
+            app:theme_summary_item="secundary" />
 
         <View
             android:id="@+id/line2"
@@ -156,9 +156,9 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/line2"
-            app:text_key_item="Número de parcelas:"
+            app:text_title_item="Número de parcelas:"
             app:text_value_item="24 vezes"
-            app:type_summary_item="secundary" />
+            app:theme_summary_item="secundary" />
 
         <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
             android:id="@+id/summaryItemValueInstallments"
@@ -171,9 +171,9 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/summaryItemNumberInstallments"
-            app:text_key_item="Valor das parcelas:"
+            app:text_title_item="Valor das parcelas:"
             app:text_value_item="R$ 109,45"
-            app:type_summary_item="secundary" />
+            app:theme_summary_item="secundary" />
 
         <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
             android:id="@+id/summaryItemTotalValue"
@@ -186,9 +186,9 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/summaryItemValueInstallments"
-            app:text_key_item="Total a ser pago:"
+            app:text_title_item="Total a ser pago:"
             app:text_value_item="R$ 2.626,75"
-            app:type_summary_item="secundary" />
+            app:theme_summary_item="secundary" />
 
         <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
             android:id="@+id/summaryItemMaturityInstallment"
@@ -201,9 +201,9 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/summaryItemTotalValue"
-            app:text_key_item="Vencimento das parcelas:"
+            app:text_title_item="Vencimento das parcelas:"
             app:text_value_item="Dia 5 de cada mês"
-            app:type_summary_item="secundary" />
+            app:theme_summary_item="secundary" />
 
         <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
             android:id="@+id/summaryItemFirstInstallment"
@@ -216,9 +216,9 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/summaryItemMaturityInstallment"
-            app:text_key_item="Primeira parcela:"
+            app:text_title_item="Primeira parcela:"
             app:text_value_item="05/06/2019"
-            app:type_summary_item="secundary" />
+            app:theme_summary_item="secundary" />
 
         <com.pan.dskit.items.PanSummaryItem.PanSummaryItem
             android:id="@+id/summaryItemLastInstallment"
@@ -231,9 +231,9 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/summaryItemFirstInstallment"
-            app:text_key_item="Última parcela:"
+            app:text_title_item="Última parcela:"
             app:text_value_item="05/06/2021"
-            app:type_summary_item="secundary" />
+            app:theme_summary_item="secundary" />
 
         <View
             android:id="@+id/line3"
@@ -311,9 +311,9 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/line4"
-            app:text_key_item="Taxas e encargos:"
+            app:text_title_item="Taxas e encargos:"
             app:text_value_item="IOF: 0,01%\nJuros ao mês: 5%\nJuros e IOF (CET):\n60% ao ano"
-            app:type_summary_item="secundary" />
+            app:theme_summary_item="secundary" />
 
         <View
             android:id="@+id/line5"
@@ -338,9 +338,9 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/line5"
-            app:text_key_item="Autenticação de segurança:"
+            app:text_title_item="Autenticação de segurança:"
             app:text_value_item="681A.392B.183A.492B"
-            app:type_summary_item="secundary" />
+            app:theme_summary_item="secundary" />
 
         <com.pan.dskit.button.PanRoundButton.PanRoundButton
             android:id="@+id/btnShareReceipt"
@@ -356,7 +356,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/summaryItemSecurityAuthentication"
             app:text_button="Compartilhar comprovante"
-            app:type_button="primary" />
+            app:theme_button="primary" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="dark_gray">#373740</color>
+    <color name="dodger_blue">#00AFFF</color>
+    <color name="gray">#C3CDDC</color>
+    <color name="light_gray">#5D5D66</color>
+    <color name="light_white">#EFEFEF</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_128">128dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_19">19dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
+    <dimen name="dimen_28">28dp</dimen>
+    <dimen name="dimen_32">32dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
+    <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_64">64dp</dimen>
+    <dimen name="dimen_68">68dp</dimen>
+    <dimen name="dimen_70">70dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_80">80dp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="font_22">22sp</dimen>
+    <dimen name="font_24">24sp</dimen>
+    <dimen name="font_32">32sp</dimen>
+    <string name="app_name">DSKit</string>
+    <string name="txt_back">voltar</string>
+    <string name="txt_close">fechar</string>
+    <style name="PanRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/isidora_sans_semibold</item>
+        <item name="android:textSize">@dimen/font_24</item>
+    </style>
+    <style name="Theme.DSKit" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:background">@color/light_white</item>
+        <item name="windowActionBar">true</item>
+        <item name="android:statusBarColor">@color/light_white</item>
+        <item name="android:navigationContentDescription">@color/black</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:color">@color/black</item>
+    </style>
+    <style name="Theme.DSKitBlue" parent="Theme.DSKit">
+        <item name="android:statusBarColor">@color/dodger_blue</item>
+        <item name="android:navigationContentDescription">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="Theme.DSKitGray" parent="Theme.DSKit">
+        <item name="android:statusBarColor">@color/dark_gray</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <declare-styleable name="PanButton">
+        <attr format="enum" name="theme_button">
+            <enum name="primary" value="0"/>
+            <enum name="secundary" value="1"/>
+        </attr>
+        <attr format="string" name="text_button"/>
+    </declare-styleable>
+    <declare-styleable name="PanImageInfoItem">
+        <attr format="enum" name="theme_item">
+            <enum name="primary" value="0"/>
+            <enum name="secundary" value="1"/>
+            <enum name="tertiary" value="2"/>
+        </attr>
+        <attr format="reference" name="src_item"/>
+        <attr format="string" name="text_item"/>
+    </declare-styleable>
+    <declare-styleable name="PanLabel">
+        <attr format="enum" name="color_label">
+            <enum name="blue" value="0"/>
+            <enum name="white" value="1"/>
+            <enum name="black" value="2"/>
+        </attr>
+        <attr format="enum" name="font_label">
+            <enum name="regular" value="0"/>
+            <enum name="semibold" value="1"/>
+        </attr>
+        <attr format="enum" name="align_label">
+            <enum name="start" value="5"/>
+            <enum name="center" value="4"/>
+            <enum name="end" value="6"/>
+        </attr>
+        <attr format="string" name="text_label"/>
+        <attr format="integer" name="size_label"/>
+    </declare-styleable>
+    <declare-styleable name="PanSummaryItem">
+        <attr format="enum" name="theme_summary_item">
+            <enum name="primary" value="0"/>
+            <enum name="secundary" value="1"/>
+        </attr>
+        <attr format="string" name="text_title_item"/>
+        <attr format="string" name="text_value_item"/>
+    </declare-styleable>
+    <declare-styleable name="PanToolbar">
+        <attr format="enum" name="has_close">
+            <enum name="visible" value="0"/>
+            <enum name="gone" value="8"/>
+        </attr>
+        <attr format="enum" name="color_toolbar">
+            <enum name="black" value="0"/>
+            <enum name="white" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="PanValue">
+        <attr format="integer" name="min_value"/>
+        <attr format="integer" name="max_value"/>
+    </declare-styleable>
+</resources>

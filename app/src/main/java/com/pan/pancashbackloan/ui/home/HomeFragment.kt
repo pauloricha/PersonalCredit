@@ -6,32 +6,45 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.pan.pancashbackloan.R
+import com.pan.pancashbackloan.common.getMoneyFormat
 import com.pan.pancashbackloan.databinding.HomeFragmentBinding
 
 class HomeFragment : Fragment() {
 
-    private var _binding: HomeFragmentBinding? = null
-    private val binding: HomeFragmentBinding get() = _binding!!
+    private lateinit var binding: HomeFragmentBinding
 
-    private lateinit var viewModel: HomeViewModel
+    private val viewModel: HomeViewModel by viewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        _binding = HomeFragmentBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
+    ): View {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             requireActivity().window.statusBarColor = getResources().getColor(R.color.dodger_blue)
         }
 
-        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        binding = HomeFragmentBinding.inflate(inflater, container, false)
+
+        binding.btnSimulate.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeToStart(viewModel.getLoadApproved())
+            findNavController().navigate(action)
+        }
+
+        subscribeUi()
+
+        return binding.root
+    }
+
+    private fun subscribeUi() {
+        viewModel.loanApproved.observe(viewLifecycleOwner, Observer<Int> {
+                loanApproved ->
+            binding.tvLoanAproved.setTextLabel(getMoneyFormat(loanApproved.toDouble()))
+        })
+        viewModel.getLoanApproved()
     }
 }
